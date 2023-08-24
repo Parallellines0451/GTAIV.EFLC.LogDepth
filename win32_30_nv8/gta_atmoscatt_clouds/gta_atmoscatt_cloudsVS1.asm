@@ -128,7 +128,6 @@
     mad o1.z, r0.z, -r1.x, c4.x
     mul r1.x, r0.z, r1.x
     mov o0.z, r1.x
-	mov o10.z, r1.x
     mul_sat r1.x, r2.y, c68.x
     mad r1.y, r2.x, c7.x, c7.x
     add r1.x, -r1.x, c4.x
