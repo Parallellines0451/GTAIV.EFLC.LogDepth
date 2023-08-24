@@ -24,8 +24,15 @@
     mul r0, c9, v0.y
     mad r0, v0.x, c8, r0
     mad r0, v0.z, c10, r0
-    add o0, r0, c11
-    add o10, r0, c11
+    add r0, r0, c11
+	mov o0, r0
+	// ----- Derive proper W_clip -----
+	add r20.x, c128.y, -c128.x
+	mul r20.y, c128.x, c128.y
+	mad r20.z, r0.z, r20.x, r20.y
+	rcp r20.w, c128.y
+	mul o10.w, r20.z, r20.w
+	// --------------------------------
     mov o1.xy, v2
     mov o2, v1
 

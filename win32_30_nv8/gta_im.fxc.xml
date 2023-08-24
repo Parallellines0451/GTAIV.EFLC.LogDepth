@@ -75,11 +75,16 @@
 			<Item>
 				<DataType>asm</DataType>
 				<File>gta_im\gta_imVS2.asm</File>
-				<Variables value="1" >
+				<Variables value="2" >
 					<Item>
 						<Type>float4x4</Type>
 						<Name>gWorldViewProj</Name>
 						<Index value="8" />
+					</Item>
+					<Item>
+						<Type>float4</Type>
+						<Name>NearFarPlane</Name>
+						<Index value="128" />
 					</Item>
 				</Variables>
 			</Item>
