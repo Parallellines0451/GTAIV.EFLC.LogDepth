@@ -29,16 +29,11 @@
 			<Item>
 				<DataType>asm</DataType>
 				<File>rage_im\rage_imVS1.asm</File>
-				<Variables value="2" >
+				<Variables value="1" >
 					<Item>
 						<Type>float4x4</Type>
 						<Name>gWorldViewProj</Name>
 						<Index value="8" />
-					</Item>
-					<Item>
-						<Type>float4</Type>
-						<Name>NearFarPlane</Name>
-						<Index value="128" />
 					</Item>
 				</Variables>
 			</Item>

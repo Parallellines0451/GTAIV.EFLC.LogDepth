@@ -27,10 +27,10 @@
     add r0, r0, c11
 	mov o0, r0
 	// ----- Derive proper W_clip -----
-	add r20.x, c128.y, -c128.x
-	mul r20.y, c128.x, c128.y
+	add r20.x, c227.y, -c227.x
+	mul r20.y, c227.x, c227.y
 	mad r20.z, r0.z, r20.x, r20.y
-	rcp r20.w, c128.y
+	rcp r20.w, c227.y
 	mul o10.w, r20.z, r20.w
 	// --------------------------------
     mov o1.xy, v2
