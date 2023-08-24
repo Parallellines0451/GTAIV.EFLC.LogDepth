@@ -52,7 +52,7 @@
     mad o0.xy, c44.zwzw, r1.x, r0
     add o0.z, r0.z, -c210.x
     mov o0.w, r0.w
-    mov o10.w, r0.w
+    mov o10.zw, r0.zw
     mov o2.x, v3.w
     mov o2.y, v4.w
     mov o2.z, v5.w
