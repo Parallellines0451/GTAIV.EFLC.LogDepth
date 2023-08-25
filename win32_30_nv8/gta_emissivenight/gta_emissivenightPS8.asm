@@ -88,7 +88,8 @@
     mov oC0.w, r0.w
 	// -------- Encode depth as log --------
 	rcp r20.z, c128.x
-	mul r20.x, v9.w, r20.z
+	min r20.x, v9.w, c128.y
+	mul r20.x, r20.x, r20.z
 	mul r20.y, c128.y, r20.z
 	log r20.x, r20.x
 	log r20.y, r20.y
