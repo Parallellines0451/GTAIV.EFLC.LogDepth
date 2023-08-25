@@ -43,24 +43,21 @@
     mul r0.xy, r0, c66.zwzw
     texld r1, r0, s0
 	// ---------- Linearize depth ----------
-	rcp r20.x, c128.x
-	mul r20.x, r20.x, c128.y
-	pow r20.x, r20.x, r1.x
-	mul r20.x, r20.x, c128.x	// W_clip
-	
-	add r20.y, r20.x, -c128.x
-	add r20.z, c128.y, -c128.x
-	mul r20.y, r20.y, c128.y
-	mul r20.z, r20.z, r20.x
-	rcp r20.z, r20.z
-	mul r20.w, r20.y, r20.z		// Linear Z
-	
-	min r20.w, r20.w, c127.x	// FP error hack
-	if_eq r1.x, c127.y
-		mov r20.w, c127.y
+	if_ne r1.x, c127.y
+		rcp r20.x, c128.x
+		mul r20.x, r20.x, c128.y
+		pow r20.x, r20.x, r1.x
+		mul r20.x, r20.x, c128.x	// W_clip
+		
+		add r20.y, r20.x, -c128.x
+		add r20.z, c128.y, -c128.x
+		mul r20.y, r20.y, c128.y
+		mul r20.z, r20.z, r20.x
+		rcp r20.z, r20.z
+		mul r20.w, r20.y, r20.z		// Linear depth
+		
+		min r1, r20.w, c127.x	// FP error hack
 	endif
-	
-	mov r1, r20.w
 	// -------------------------------------
     mad r0.xy, r0, c0.y, c0.z
     mad r0.z, r1.x, c72.z, -c72.w

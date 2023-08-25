@@ -83,24 +83,21 @@
     dcl_2d s15
     texld r0, v0, s4
 	// ---------- Linearize depth ----------
-	rcp r20.x, c128.x
-	mul r20.x, r20.x, c128.y
-	pow r20.x, r20.x, r0.x
-	mul r20.x, r20.x, c128.x	// W_clip
-	
-	add r20.y, r20.x, -c128.x
-	add r20.z, c128.y, -c128.x
-	mul r20.y, r20.y, c128.y
-	mul r20.z, r20.z, r20.x
-	rcp r20.z, r20.z
-	mul r20.w, r20.y, r20.z		// Linear Z
-	
-	min r20.w, r20.w, c127.x	// FP error hack
-	if_eq r0.x, c127.y
-		mov r20.w, c127.y
+	if_ne r0.x, c127.y
+		rcp r20.x, c128.x
+		mul r20.x, r20.x, c128.y
+		pow r20.x, r20.x, r0.x
+		mul r20.x, r20.x, c128.x	// W_clip
+		
+		add r20.y, r20.x, -c128.x
+		add r20.z, c128.y, -c128.x
+		mul r20.y, r20.y, c128.y
+		mul r20.z, r20.z, r20.x
+		rcp r20.z, r20.z
+		mul r20.w, r20.y, r20.z		// Linear depth
+		
+		min r0, r20.w, c127.x	// FP error hack
 	endif
-	
-	mov r0, r20.w
 	// -------------------------------------
     mad r0.x, r0.x, c66.z, -c66.w
     mul r0.x, r0.x, v1.w
