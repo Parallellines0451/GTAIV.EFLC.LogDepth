@@ -604,7 +604,7 @@
 			<Item>
 				<DataType>asm</DataType>
 				<File>deferred_lighting\deferred_lightingVS11.asm</File>
-				<Variables value="7" >
+				<Variables value="6" >
 					<Item>
 						<Type>sampler</Type>
 						<Name>GBufferTextureSampler3</Name>
@@ -634,11 +634,6 @@
 						<Type>float2</Type>
 						<Name>poisson12</Name>
 						<Index value="208" />
-					</Item>
-					<Item>
-						<Type>float4</Type>
-						<Name>NearFarPlane</Name>
-						<Index value="128" />
 					</Item>
 				</Variables>
 			</Item>
