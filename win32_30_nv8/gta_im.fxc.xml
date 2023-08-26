@@ -416,16 +416,11 @@
 			<Item>
 				<DataType>asm</DataType>
 				<File>gta_im\gta_imPS7.asm</File>
-				<Variables value="2" >
+				<Variables value="1" >
 					<Item>
 						<Type>sampler</Type>
 						<Name>DepthMapPointSampler</Name>
 						<Index value="0" />
-					</Item>
-					<Item>
-						<Type>float4</Type>
-						<Name>NearFarPlane</Name>
-						<Index value="128" />
 					</Item>
 				</Variables>
 			</Item>
