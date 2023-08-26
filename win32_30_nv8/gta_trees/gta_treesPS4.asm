@@ -158,7 +158,7 @@
     mul oC0.z, r0.x, c9.z
     add r0.x, r1.y, r0.y
     mul oC0.w, r0.x, c9.z
-	// -------- Encode depth as log --------
+	// ----------- Linear to Log -----------
 	rcp r20.z, c128.x
 	mul r20.x, v9.w, r20.z
 	mul r20.y, c128.y, r20.z

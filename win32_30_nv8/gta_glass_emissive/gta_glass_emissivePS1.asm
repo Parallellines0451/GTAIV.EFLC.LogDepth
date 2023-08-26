@@ -50,7 +50,7 @@
     mul r1.xyz, r0, c66.x
     mul r1.w, r0.w, c39.x
     mul oC0, r1, c51
-	// -------- Encode depth as log --------
+	// ----------- Linear to Log -----------
 	rcp r20.z, c128.x
 	min r20.x, v9.w, c128.y
 	mul r20.x, r20.x, r20.z

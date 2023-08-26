@@ -20,7 +20,7 @@
     dcl_2d s15
     add r0.xy, c0, v0
     texld r0, r0, s15
-	// ---------- Linearize depth ----------
+	// ----------- Log to Linear -----------
 	if_ne r0.x, c127.y
 		rcp r20.x, c128.x
 		mul r20.x, r20.x, c128.y
@@ -39,7 +39,7 @@
 	// -------------------------------------
     add r0.zw, c0.y, v0.xyxy
     texld r1, r0.zwzw, s15
-	// ---------- Linearize depth ----------
+	// ----------- Log to Linear -----------
 	if_ne r1.x, c127.y
 		rcp r20.x, c128.x
 		mul r20.x, r20.x, c128.y
@@ -59,7 +59,7 @@
     mov r0.y, r1.x
     add r0.zw, c0.x, v0.xyxy
     texld r1, r0.zwzw, s15
-	// ---------- Linearize depth ----------
+	// ----------- Log to Linear -----------
 	if_ne r1.x, c127.y
 		rcp r20.x, c128.x
 		mul r20.x, r20.x, c128.y
@@ -78,7 +78,7 @@
 	// -------------------------------------
     add r0.zw, c0.xyyx, v0.xyxy
     texld r2, r0.zwzw, s15
-	// ---------- Linearize depth ----------
+	// ----------- Log to Linear -----------
 	if_ne r2.x, c127.y
 		rcp r20.x, c128.x
 		mul r20.x, r20.x, c128.y

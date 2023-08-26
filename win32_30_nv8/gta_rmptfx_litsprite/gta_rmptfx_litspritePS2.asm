@@ -37,7 +37,7 @@
     dcl_2d s12
     mad r0.xy, vPos, c129, c129.zwzw
     texld r0, r0, s12
-	// ---------- Linearize depth ----------
+	// ----------- Log to Linear -----------
 	if_ne r0.x, c127.y
 		rcp r20.x, c128.x
 		mul r20.x, r20.x, c128.y
@@ -79,7 +79,7 @@
     abs r2.x, c72.x
     cmp r0, -r2.x, r0, r1
     max oC0, r0, c1.z
-	// -------- Encode depth as log --------
+	// ----------- Linear to Log -----------
 	rcp r20.z, c128.x
 	mul r20.x, v9.w, r20.z
 	mul r20.y, c128.y, r20.z

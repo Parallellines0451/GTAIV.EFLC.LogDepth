@@ -4,7 +4,7 @@
     dcl_color v0
 	dcl_texcoord9 v9
     mov oC0, v0
-	// -------- Encode depth as log --------
+	// ----------- Linear to Log -----------
 	rcp r20.z, c128.x
 	mul r20.x, v9.w, r20.z
 	mul r20.y, c128.y, r20.z

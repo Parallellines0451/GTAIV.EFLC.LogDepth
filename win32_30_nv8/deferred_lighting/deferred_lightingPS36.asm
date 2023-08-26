@@ -42,7 +42,7 @@
     add r0.xy, c0.x, vPos
     mul r0.xy, r0, c66.zwzw
     texld r1, r0, s0
-	// ---------- Linearize depth ----------
+	// ----------- Log to Linear -----------
 	if_ne r1.x, c127.y
 		rcp r20.x, c128.x
 		mul r20.x, r20.x, c128.y

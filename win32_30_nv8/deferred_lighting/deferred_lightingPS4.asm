@@ -63,7 +63,7 @@
     add r0.xyz, r0, c2.y
     nrm r1.xyz, r0
     texld r0, v0, s4
-	// ---------- Linearize depth ----------
+	// ----------- Log to Linear -----------
 	if_ne r0.x, c127.y
 		rcp r20.x, c128.x
 		mul r20.x, r20.x, c128.y

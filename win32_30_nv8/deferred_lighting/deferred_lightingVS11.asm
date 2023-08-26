@@ -77,7 +77,7 @@
       mad r3.xy, r2, c2, c2.x
       mov r3.zw, c1.y
       texldl r3, r3, s0
-	// ---------- Linearize depth ----------
+	// ----------- Log to Linear -----------
 	if_ne r3.x, c127.y
 		rcp r20.x, c227.x
 		mul r20.x, r20.x, c227.y
@@ -102,7 +102,7 @@
       mad r3.xy, r2, c2, c2.x
       mov r3.zw, c1.y
       texldl r3, r3, s0
-	// ---------- Linearize depth ----------
+	// ----------- Log to Linear -----------
 	if_ne r3.x, c127.y
 		rcp r20.x, c227.x
 		mul r20.x, r20.x, c227.y
@@ -129,7 +129,7 @@
       mad r3.xy, r2, c2, c2.x
       mov r3.zw, c1.y
       texldl r3, r3, s0
-	// ---------- Linearize depth ----------
+	// ----------- Log to Linear -----------
 	if_ne r3.x, c127.y
 		rcp r20.x, c227.x
 		mul r20.x, r20.x, c227.y
@@ -155,7 +155,7 @@
       mad r3.xy, r2, c2, c2.x
       mov r3.zw, c1.y
       texldl r3, r3, s0
-	// ---------- Linearize depth ----------
+	// ----------- Log to Linear -----------
 	if_ne r3.x, c127.y
 		rcp r20.x, c227.x
 		mul r20.x, r20.x, c227.y
@@ -181,7 +181,7 @@
       mad r3.xy, r2, c2, c2.x
       mov r3.zw, c1.y
       texldl r3, r3, s0
-	// ---------- Linearize depth ----------
+	// ----------- Log to Linear -----------
 	if_ne r3.x, c127.y
 		rcp r20.x, c227.x
 		mul r20.x, r20.x, c227.y
@@ -207,7 +207,7 @@
       mad r3.xy, r2, c2, c2.x
       mov r3.zw, c1.y
       texldl r3, r3, s0
-	// ---------- Linearize depth ----------
+	// ----------- Log to Linear -----------
 	if_ne r3.x, c127.y
 		rcp r20.x, c227.x
 		mul r20.x, r20.x, c227.y
@@ -233,7 +233,7 @@
       mad r3.xy, r2, c2, c2.x
       mov r3.zw, c1.y
       texldl r3, r3, s0
-	// ---------- Linearize depth ----------
+	// ----------- Log to Linear -----------
 	if_ne r3.x, c127.y
 		rcp r20.x, c227.x
 		mul r20.x, r20.x, c227.y
@@ -259,7 +259,7 @@
       mad r3.xy, r2, c2, c2.x
       mov r3.zw, c1.y
       texldl r3, r3, s0
-	// ---------- Linearize depth ----------
+	// ----------- Log to Linear -----------
 	if_ne r3.x, c127.y
 		rcp r20.x, c227.x
 		mul r20.x, r20.x, c227.y
@@ -285,7 +285,7 @@
       mad r3.xy, r2, c2, c2.x
       mov r3.zw, c1.y
       texldl r3, r3, s0
-	// ---------- Linearize depth ----------
+	// ----------- Log to Linear -----------
 	if_ne r3.x, c127.y
 		rcp r20.x, c227.x
 		mul r20.x, r20.x, c227.y
@@ -311,7 +311,7 @@
       mad r3.xy, r2, c2, c2.x
       mov r3.zw, c1.y
       texldl r3, r3, s0
-	// ---------- Linearize depth ----------
+	// ----------- Log to Linear -----------
 	if_ne r3.x, c127.y
 		rcp r20.x, c227.x
 		mul r20.x, r20.x, c227.y
@@ -337,7 +337,7 @@
       mad r3.xy, r2, c2, c2.x
       mov r3.zw, c1.y
       texldl r3, r3, s0
-	// ---------- Linearize depth ----------
+	// ----------- Log to Linear -----------
 	if_ne r3.x, c127.y
 		rcp r20.x, c227.x
 		mul r20.x, r20.x, c227.y
@@ -363,7 +363,7 @@
       mad r2.xy, r1, c2, c2.x
       mov r2.zw, c1.y
       texldl r2, r2, s0
-	// ---------- Linearize depth ----------
+	// ----------- Log to Linear -----------
 	if_ne r2.x, c127.y
 		rcp r20.x, c227.x
 		mul r20.x, r20.x, c227.y

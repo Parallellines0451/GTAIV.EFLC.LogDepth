@@ -99,7 +99,7 @@
     mul_sat r0.w, r0.w, r1.x
     add r1.xyz, -r0, c42
     mad oC0.xyz, r0.w, r1, r0
-	// -------- Encode depth as log --------
+	// ----------- Linear to Log -----------
 	rcp r20.z, c128.x
 	min r20.x, v9.w, c128.y
 	mul r20.x, r20.x, r20.z

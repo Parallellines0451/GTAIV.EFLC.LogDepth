@@ -51,7 +51,7 @@
     mul_pp r0.xyz, r0, c67.x
     min_pp oC0.xyz, c68, r0
     mov_pp oC0.w, c0.y
-	// -------- Encode depth as log --------
+	// ----------- Linear to Log -----------
 	rcp r20.z, c128.x
 	mul r20.x, v9.w, r20.z
 	mul r20.y, c128.y, r20.z

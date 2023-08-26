@@ -19,7 +19,7 @@
     dcl_2d s0
     texld r0, v0, s0
     add oC0, r0.w, r0.w
-	// -------- Encode depth as log --------
+	// ----------- Linear to Log -----------
 	rcp r20.z, c128.x
 	mul r20.x, v9.w, r20.z
 	mul r20.y, c128.y, r20.z

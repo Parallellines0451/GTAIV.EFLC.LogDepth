@@ -43,7 +43,7 @@
       cmp r0.xyz, -r1.x, r0, r2
     endif
     mov oC0, r0
-	// -------- Encode depth as log --------
+	// ----------- Linear to Log -----------
 	rcp r20.z, c128.x
 	mul r20.x, v9.w, r20.z
 	mul r20.y, c128.y, r20.z

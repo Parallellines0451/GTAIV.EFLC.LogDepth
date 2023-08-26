@@ -54,7 +54,7 @@
     add r1.xy, c0.x, vPos
     mul r1.xy, r1, c78.zwzw
     texld r2, r1, s2
-	// ---------- Linearize depth ----------
+	// ----------- Log to Linear -----------
 	if_ne r2.x, c127.y
 		rcp r20.x, c128.x
 		mul r20.x, r20.x, c128.y
@@ -109,7 +109,7 @@
     mul r0.x, r0.x, c77.w
     mul oC0.w, r0.x, c2.x
     mov oC0.xyz, c1.z
-	// -------- Encode depth as log --------
+	// ----------- Linear to Log -----------
 	rcp r20.z, c128.x
 	mul r20.x, v9.w, r20.z
 	mul r20.y, c128.y, r20.z

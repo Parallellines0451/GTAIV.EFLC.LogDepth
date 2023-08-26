@@ -94,7 +94,7 @@
     mov oC1.w, r1.x
     mov oC2.w, r1.x
     mul oC3, -r3.yzzz, c52.x
-	// -------- Encode depth as log --------
+	// ----------- Linear to Log -----------
 	rcp r20.z, c128.x
 	mul r20.x, v9.w, r20.z
 	mul r20.y, c128.y, r20.z

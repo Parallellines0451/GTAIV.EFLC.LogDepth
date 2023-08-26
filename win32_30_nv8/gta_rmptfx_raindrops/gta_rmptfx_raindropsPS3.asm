@@ -93,7 +93,7 @@
     lrp r3.x, c0.x, r2.w, r1.w
     mul_sat r0.w, r3.x, v0.w
     max oC0, r0, c2.z
-	// -------- Encode depth as log --------
+	// ----------- Linear to Log -----------
 	rcp r20.z, c128.x
 	mul r20.x, v9.w, r20.z
 	mul r20.y, c128.y, r20.z

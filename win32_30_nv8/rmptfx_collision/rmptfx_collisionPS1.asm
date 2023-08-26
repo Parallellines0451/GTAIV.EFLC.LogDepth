@@ -5,7 +5,7 @@
     dcl_texcoord1 v0.xyz
 	dcl_texcoord9 v9
     mad oC0, v0.xyzx, c0.xxxy, c0.xxxz
-	// -------- Encode depth as log --------
+	// ----------- Linear to Log -----------
 	rcp r20.z, c128.x
 	mul r20.x, v9.w, r20.z
 	mul r20.y, c128.y, r20.z

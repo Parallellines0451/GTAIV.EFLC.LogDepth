@@ -301,7 +301,7 @@
     cmp r1, -r1.y, -c1.y, -c1.z
     texkill r1
     mov oC0, r0
-	// -------- Encode depth as log --------
+	// ----------- Linear to Log -----------
 	rcp r20.z, c128.x
 	min r20.x, v9.w, c128.y
 	mul r20.x, r20.x, r20.z

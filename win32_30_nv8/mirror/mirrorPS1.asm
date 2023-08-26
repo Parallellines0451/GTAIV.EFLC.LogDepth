@@ -30,7 +30,7 @@
     texld r0, r0, s0
     mul oC0.xyz, r0, c39.y
     mov oC0.w, c46.x
-	// -------- Encode depth as log --------
+	// ----------- Linear to Log -----------
 	rcp r20.z, c128.x
 	mul r20.x, v9.w, r20.z
 	mul r20.y, c128.y, r20.z

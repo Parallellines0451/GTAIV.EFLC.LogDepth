@@ -300,7 +300,7 @@
     mad r2.yzw, r1.w, r2, c43.xxyz
     mad r0.xyz, r0, -r2.x, r2.yzww
     mad oC0.xyz, r0.w, r0, r1
-	// -------- Encode depth as log --------
+	// ----------- Linear to Log -----------
 	rcp r20.z, c128.x
 	mul r20.x, v9.w, r20.z
 	mul r20.y, c128.y, r20.z

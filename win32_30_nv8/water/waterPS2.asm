@@ -244,7 +244,7 @@
     mul r7.xyz, r7, r0.x
     mad r7.xyz, r7, c3.xxyw, c3.y
     texld r8, r7.zyzw, s2
-	// ---------- Linearize depth ----------
+	// ----------- Log to Linear -----------
 	if_ne r8.x, c127.y
 		rcp r20.x, c128.x
 		mul r20.x, r20.x, c128.y
@@ -335,7 +335,7 @@
     mad r1.xyz, r1.xzww, c9.w, r2
     lrp r2.xyz, r0.z, r1, r0.xyww
     mul oC0.xyz, r2, c39.y
-	// -------- Encode depth as log --------
+	// ----------- Linear to Log -----------
 	rcp r20.z, c128.x
 	mul r20.x, v9.w, r20.z
 	mul r20.y, c128.y, r20.z

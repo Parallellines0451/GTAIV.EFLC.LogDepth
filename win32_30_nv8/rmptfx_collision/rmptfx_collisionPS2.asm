@@ -18,7 +18,7 @@
     dcl_texcoord v0.xy
     dcl_2d s15
     texld r0, v0, s15
-	// ---------- Linearize depth ----------
+	// ----------- Log to Linear -----------
 	if_ne r0.x, c127.y
 		rcp r20.x, c128.x
 		mul r20.x, r20.x, c128.y

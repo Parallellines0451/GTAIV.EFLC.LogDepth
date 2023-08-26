@@ -51,7 +51,7 @@
     add r0.z, -c16.z, c16.w
     rcp r0.z, r0.z
     texld r1, v0, s0
-	// ---------- Linearize depth ----------
+	// ----------- Log to Linear -----------
 	if_ne r1.x, c127.y
 		rcp r20.x, c128.x
 		mul r20.x, r20.x, c128.y

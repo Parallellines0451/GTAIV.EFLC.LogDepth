@@ -29,7 +29,7 @@
     mul r0.xy, r0, c66.zwzw
     texld r1, r0, s0
     texld r0, r0, s1
-	// ---------- Linearize depth ----------
+	// ----------- Log to Linear -----------
 	if_ne r0.x, c127.y
 		rcp r20.x, c128.x
 		mul r20.x, r20.x, c128.y

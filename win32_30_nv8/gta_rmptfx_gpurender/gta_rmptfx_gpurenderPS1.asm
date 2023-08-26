@@ -34,7 +34,7 @@
     mul r2, r2, v0
     mul r1, r1, r2
     cmp oC0, v1.x, r1, r0
-	// -------- Encode depth as log --------
+	// ----------- Linear to Log -----------
 	rcp r20.z, c128.x
 	mul r20.x, v9.w, r20.z
 	mul r20.y, c128.y, r20.z

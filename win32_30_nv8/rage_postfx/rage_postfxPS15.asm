@@ -53,7 +53,7 @@
     dcl_2d s3
     dcl_2d s4
     texld r0, v0, s1
-	// ---------- Linearize depth ----------
+	// ----------- Log to Linear -----------
 	if_ne r0.x, c127.y
 		rcp r20.x, c128.x
 		mul r20.x, r20.x, c128.y
