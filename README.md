@@ -14,9 +14,8 @@ Functions used:
 - W_clip = pow((far / near), log_depth) * near
 - linear_depth = (far * (W_clip - near)) / (W_clip * (far - near))
 
-Linear to Log:
+Linear to Log template:
 
-	// ----------- Linear to Log -----------
 	rcp r20.z, c128.x
 	mul r20.x, v9.w, r20.z
 	mul r20.y, c128.y, r20.z
@@ -24,13 +23,11 @@ Linear to Log:
 	log r20.y, r20.y
 	rcp r20.y, r20.y
 	mul oDepth, r20.x, r20.y
-	// -------------------------------------
 
-Log to Linear:
+Log to Linear template:
 
 	def c127, 0.9999999, 1, 0, 0
 
-	// ----------- Log to Linear -----------
 	if_ne REPLACEME.x, c127.y
 		rcp r20.x, c128.x
 		mul r20.x, r20.x, c128.y
@@ -46,7 +43,6 @@ Log to Linear:
 		
 		min REPLACEME, r20.w, c127.x	// FP error hack
 	endif
-	// -------------------------------------
 	
 # Notes
 
