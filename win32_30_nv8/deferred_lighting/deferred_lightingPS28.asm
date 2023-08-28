@@ -22,7 +22,7 @@
 //
 
     ps_3_0
-    def c127, 0.9999999, 1, 0, 0
+    def c127, 0.9999999, 1, 0, 0	// Log2Linear constants
     def c0, 0.50999999, 0, 0.5, 0
     dcl_color v0
     dcl_texcoord v1.xyw
