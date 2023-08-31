@@ -14,7 +14,7 @@
 //
 
     ps_3_0
-    def c127, 0.9999999, 1, 0, 0	// Log2Linear constants
+    def c127, 0.9999999, 1, 0, 0	// LogDepth constants
     dcl_texcoord v0.xy
     dcl_2d s15
     texld r0, v0, s15

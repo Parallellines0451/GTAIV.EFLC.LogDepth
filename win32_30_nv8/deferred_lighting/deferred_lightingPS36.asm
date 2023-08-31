@@ -34,7 +34,7 @@
 //
 
     ps_3_0
-    def c127, 0.9999999, 1, 0, 0	// Log2Linear constants
+    def c127, 0.9999999, 1, 0, 0	// LogDepth constants
     def c0, 0.50999999, 2, -1, -0
     dcl vPos.xy
     dcl_2d s0

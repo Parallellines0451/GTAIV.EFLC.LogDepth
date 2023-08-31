@@ -20,6 +20,7 @@
 //
 
     ps_3_0
+    def c127, 0.9999999, 1, 0, 0	// LogDepth constants
     def c0, 2, -1, 1, 0
     dcl_color v0
     dcl_texcoord v1

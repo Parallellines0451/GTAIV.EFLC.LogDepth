@@ -38,6 +38,7 @@
 //
 
     ps_3_0
+    def c127, 0.9999999, 1, 0, 0	// LogDepth constants
     def c0, 1, -0.5, 3, 9.99999975e-006
     def c1, 1.39999998, 0, 1, 0.09765625
     dcl_texcoord v0.xy
