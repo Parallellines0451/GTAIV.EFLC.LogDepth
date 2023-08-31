@@ -50,6 +50,7 @@
     add r0, r0, c11
     mul r1.x, r0.w, c0.z
     mad o0.xy, c44.zwzw, r1.x, r0
+    mov o10.x, c210.x
     add o0.z, r0.z, -c210.x
     add o10.z, r0.z, -c210.x
     mov o0.w, r0.w

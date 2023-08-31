@@ -310,7 +310,7 @@
 		log r20.x, r20.x
 		log r20.y, r20.y
 		rcp r20.y, r20.y
-		mad r20.z, r20.x, r20.y, -c210.x
+		mad r20.z, r20.x, r20.y, -v9.x
 	else
 		mov r20.x, v9.z
 		rcp r20.y, v9.w
