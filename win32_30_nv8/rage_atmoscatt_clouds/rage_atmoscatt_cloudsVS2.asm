@@ -142,7 +142,7 @@
     rcp r0.z, r0.z
     mul r0.xyz, r0.z, r0.xyxw
     mad o0.xyw, r0.xyzz, -c7.zyzw, -c7.zwzy
-	mad o10.w, r0.xyzz, -c7.zyzw, -c7.zwzy
+	mad o10.xyw, r0.xyzz, -c7.zyzw, -c7.zwzy
     mov o1.xy, v1
 
 // approximately 87 instruction slots used

@@ -389,7 +389,7 @@
     mad r0, r4.x, c8, r0
     mad r0, r4.z, c10, r0
     add o0, r0, c11
-	add o10.w, r0, c11
+	add o10, r0, c11
     mul r0.xyz, r4.w, v1
     mul o2.xyz, r0, v2.y
     mov o1.x, v2.x

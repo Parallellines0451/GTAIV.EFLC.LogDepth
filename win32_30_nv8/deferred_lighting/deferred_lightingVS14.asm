@@ -62,7 +62,7 @@
     rcp r2.w, c41.x
     mul_sat r2.w, r1.w, r2.w
     mov o0, r1
-    mov o10.w, r1
+    mov o10, r1
     lrp r1.x, c41.w, r2.w, r0.w
     add r0.w, r1.x, c41.z
     mad o1.xyz, r0.w, r0, r2

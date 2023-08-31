@@ -52,7 +52,7 @@
     dp4 r1.x, r1, r2
     mad r0, r1.x, c10, r0
     add o0, r0, c11
-    add o10.w, r0, c11
+    add o10, r0, c11
     mad r0.xyz, v3.xyxw, c0.yyzw, c0.zzyw
     dp3 o1.x, c208, r0
     dp3 o1.y, c209, r0

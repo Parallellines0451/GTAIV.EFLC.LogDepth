@@ -41,7 +41,7 @@
     mad r0, v0.x, c8, r0
     mad r0, v0.z, c10, r0
     add o0, r0, c11
-    add o10.w, r0, c11
+    add o10, r0, c11
     add r0.xyz, c0.x, v1
     nrm r1.xyz, r0
     dp3 r0.x, r1, c0.yyzw

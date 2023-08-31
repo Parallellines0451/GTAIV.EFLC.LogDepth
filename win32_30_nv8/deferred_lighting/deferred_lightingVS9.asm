@@ -56,7 +56,7 @@
     mad r0, r0.z, c10, r1
     add r0, r0, c11
     mov o0, r0
-    mov o10.w, r0
+    mov o10, r0
     mov o1.w, r0.w
 
 // approximately 20 instruction slots used

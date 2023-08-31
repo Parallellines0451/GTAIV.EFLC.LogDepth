@@ -62,7 +62,7 @@
     mov o7.xyz, r0
     add r0, r1, c11
     mov o0, r0
-    mov o10.w, r0
+    mov o10, r0
     mov o2.w, r0.w
     mov o1.xy, v2
     mad o6, v1.xyzx, c0.yyyz, c0.zzzy

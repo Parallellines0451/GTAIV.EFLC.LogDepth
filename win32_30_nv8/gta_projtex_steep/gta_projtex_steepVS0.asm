@@ -304,7 +304,7 @@
     mad r0.w, r0.w, c39.z, -r6.y
     mad o6.xy, c40.z, r0.w, r6.y
     mov o0, r3
-    mov o10.w, r3
+    mov o10, r3
     mov o1.xy, v2
     mov o2.w, r3.w
     mov o2.xyz, r4

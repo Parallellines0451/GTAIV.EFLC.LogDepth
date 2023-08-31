@@ -99,7 +99,7 @@
     mov r0.zw, r1
     mov o6.xyw, r1
     mov o0, r0
-    mov o10.w, r0
+    mov o10, r0
     mov o5, r0
     mov o2.w, r0.w
     mov o3.zw, v1

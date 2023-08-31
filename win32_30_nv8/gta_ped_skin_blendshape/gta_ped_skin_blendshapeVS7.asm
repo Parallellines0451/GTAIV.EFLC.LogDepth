@@ -127,7 +127,7 @@
     add r2, r2, c11
     add o8.xyz, r6, c3
     mov o0, r2
-    mov o10.w, r2
+    mov o10, r2
     mov o1.xy, v3
     mov o2.w, r2.w
     mov o2.xyz, r0

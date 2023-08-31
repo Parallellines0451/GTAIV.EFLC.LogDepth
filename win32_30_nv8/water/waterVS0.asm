@@ -176,7 +176,7 @@
     mad r0, v0.z, c10, r0
     add r0, r0, c11
     mov o0, r0
-    mov o10.w, r0
+    mov o10, r0
     mov o1.xyz, r0.xyww
     mov o2.xyz, v1
     mov o4.xyz, c15

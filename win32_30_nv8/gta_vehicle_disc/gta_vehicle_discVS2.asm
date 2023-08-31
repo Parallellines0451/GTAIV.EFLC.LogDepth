@@ -61,7 +61,7 @@
     mov o4.xyz, r2
     mul o5.xyz, r3, v4.w
     mov o0, r1
-    mov o10.w, r1
+    mov o10, r1
     mov o2.w, r1.w
     mov o1.xy, v2
     mad o6, v5.xyzx, c0.yyyz, c0.zzzy

@@ -76,7 +76,7 @@
     mad r1.x, r1.x, c39.z, r1.w
     mad o3.xy, c40.z, r1.x, r1.y
     mov o0, r0
-    mov o10.w, r0
+    mov o10, r0
     mov o2.w, r0.w
     mov o3.zw, v5
     mov o4.w, c0.y

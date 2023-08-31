@@ -65,7 +65,7 @@
     mad r1, r0.x, c8, r1
     mad r1, r0.z, c10, r1
     add o0, r1, c11
-    add o10.w, r1, c11
+    add o10, r1, c11
     mad r0.w, v0.w, c66.x, -c66.y
     frc r1.x, r0.w
     add r1.y, r0.w, -r1.x

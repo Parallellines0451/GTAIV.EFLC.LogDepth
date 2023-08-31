@@ -77,7 +77,7 @@
     add r1.xzw, -r2.xyyz, c42.xyyz
     mad o5.xyz, r1.y, r1.xzww, c43
     mov o0, r0
-    mov o10.w, r0
+    mov o10, r0
     mov o4.xyz, r0.xyww
     mov o1.xyz, v2
     mov o2, v3
