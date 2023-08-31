@@ -303,14 +303,20 @@
     texkill r1
     mov oC0, r0
 	// ----------------------------------------------------------------- Linear2Log -----------------------------------------------------------------
-	rcp r20.z, c128.x
-	min r20.x, v9.w, c128.y
-	mul r20.x, r20.x, r20.z
-	mul r20.y, c128.y, r20.z
-	log r20.x, r20.x
-	log r20.y, r20.y
-	rcp r20.y, r20.y
-	mad oDepth, r20.x, r20.y, -c210.x
+	if_ne v9.y, c127.y
+		rcp r20.z, c128.x
+		mul r20.x, v9.w, r20.z
+		mul r20.y, c128.y, r20.z
+		log r20.x, r20.x
+		log r20.y, r20.y
+		rcp r20.y, r20.y
+		mad r20.z, r20.x, r20.y, -c210.x
+	else
+		mov r20.x, v9.z
+		rcp r20.y, v9.w
+		mul r20.z, r20.x, r20.y
+	endif
+	mov oDepth, r20.z
 	// ----------------------------------------------------------------------------------------------------------------------------------------------
 
 // approximately 190 instruction slots used (15 texture, 175 arithmetic)
