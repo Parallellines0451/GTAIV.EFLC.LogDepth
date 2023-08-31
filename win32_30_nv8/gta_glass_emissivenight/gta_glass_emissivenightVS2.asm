@@ -40,8 +40,13 @@
     mul r1.x, r0.w, c0.z
     mad o0.xy, c44.zwzw, r1.x, r0
     add o0.z, r0.z, -c210.x
+    add o10.z, r0.z, -c210.x
     mov o0.w, r0.w
     mov o10.w, r0.w
     mov o2, v1
-
+    mov r20.x, c8.w
+    add r20.x, r20.x, c9.w
+    add r20.x, r20.x, c10.w
+    add o10.y, r20.x, c11.w
+    
 // approximately 12 instruction slots used

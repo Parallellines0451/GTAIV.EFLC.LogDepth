@@ -77,12 +77,16 @@
     add r1.xzw, -r2.xyyz, c42.xyyz
     mad o5.xyz, r1.y, r1.xzww, c43
     mov o0, r0
-    mov o10, r0
+    mov o10.zw, r0
     mov o4.xyz, r0.xyww
     mov o1.xyz, v2
     mov o2, v3
     mov o3.xy, v4
     mov o4.w, v5.y
     mov o6, v6
-
+    mov r20.x, c8.w
+    add r20.x, r20.x, c9.w
+    add r20.x, r20.x, c10.w
+    add o10.y, r20.x, c11.w
+    
 // approximately 47 instruction slots used

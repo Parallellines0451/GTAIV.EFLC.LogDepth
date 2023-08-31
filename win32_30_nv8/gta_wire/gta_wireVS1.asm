@@ -99,5 +99,9 @@
     mov o4.w, c0.y
     mov o5, c0.z
     mov o6, c0.z
-
+    mov r20.x, c8.w
+    add r20.x, r20.x, c9.w
+    add r20.x, r20.x, c10.w
+    add o10.y, r20.x, c11.w
+    
 // approximately 53 instruction slots used

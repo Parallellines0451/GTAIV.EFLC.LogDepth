@@ -30,6 +30,10 @@
     rcp r1.x, r0.w
     mul o2.x, r0.z, r1.x
     mov o0, r0
-    mov o10, r0
-
+    mov o10.zw, r0
+    mov r20.x, c8.w
+    add r20.x, r20.x, c9.w
+    add r20.x, r20.x, c10.w
+    add o10.y, r20.x, c11.w
+    
 // approximately 10 instruction slots used

@@ -46,7 +46,7 @@
     mad r0, v0.x, c8, r0
     mad r0, v0.z, c10, r0
     add o0, r0, c11
-    add o10, r0, c11
+    add o10.zw, r0, c11
     mul r0.xyz, c1, v0.y
     mad r0.xyz, v0.x, c0, r0
     mad r0.xyz, v0.z, c2, r0
@@ -69,5 +69,9 @@
     mov o4.xyz, c208
     mov o5.xy, v5
     mov o5.zw, v6.xyxy
-
+    mov r20.x, c8.w
+    add r20.x, r20.x, c9.w
+    add r20.x, r20.x, c10.w
+    add o10.y, r20.x, c11.w
+    
 // approximately 26 instruction slots used

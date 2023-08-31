@@ -122,7 +122,7 @@
     rcp r1.z, r0.w
     mad o1.z, r0.z, -r1.z, c4.z
     mov o0, r0
-    mov o10, r0
+    mov o10.zw, r0
     mul_sat r0.x, r1.y, c68.x
     mad r0.y, r1.x, c4.x, c4.x
     add r0.x, -r0.x, c4.z
@@ -132,5 +132,9 @@
     mad r0.yzw, r0.y, r1.xxyz, c67.xxyz
     mad o6.xyz, r0.yzww, r0.x, c65
     mov o1.xy, v1
-
+    mov r20.x, c8.w
+    add r20.x, r20.x, c9.w
+    add r20.x, r20.x, c10.w
+    add o10.y, r20.x, c11.w
+    
 // approximately 77 instruction slots used

@@ -52,11 +52,15 @@
     dp3 o2.y, v4, c65[a0.x]
     dp3 o2.z, v4, c66[a0.x]
     mov o0, r1
-    mov o10, r1
+    mov o10.zw, r1
     mov o2.w, r1.w
     mov o1.xy, v2
     mad o4, v5.xyzx, c0.yyyz, c0.zzzy
     mov o5.w, c0.y
     mov o6.xy, v3
-
+    mov r20.x, c8.w
+    add r20.x, r20.x, c9.w
+    add r20.x, r20.x, c10.w
+    add o10.y, r20.x, c11.w
+    
 // approximately 22 instruction slots used

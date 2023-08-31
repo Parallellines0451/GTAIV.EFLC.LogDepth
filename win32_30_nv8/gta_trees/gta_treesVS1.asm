@@ -27,5 +27,9 @@
 	add o10.zw, r0.xyxy, c11
     mov o0.xy, c0.x
     mov o1.xy, v1
-
+    mov r20.x, c8.w
+    add r20.x, r20.x, c9.w
+    add r20.x, r20.x, c10.w
+    add o10.y, r20.x, c11.w
+    
 // approximately 6 instruction slots used

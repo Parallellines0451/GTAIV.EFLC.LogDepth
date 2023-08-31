@@ -309,7 +309,7 @@
     mad r1.w, r1.w, c39.z, -r6.y
     mad o6.xy, c40.z, r1.w, r6.y
     mov o0, r0
-    mov o10, r0
+    mov o10.zw, r0
     mov o1.xy, v1
     mov o2.w, r0.w
     mov o2.xyz, r4
@@ -321,5 +321,9 @@
     mov o7.xyz, r2
     mov o7.w, c4.y
     mov o8.w, c4.y
-
+    mov r20.x, c8.w
+    add r20.x, r20.x, c9.w
+    add r20.x, r20.x, c10.w
+    add o10.y, r20.x, c11.w
+    
 // approximately 280 instruction slots used (8 texture, 272 arithmetic)

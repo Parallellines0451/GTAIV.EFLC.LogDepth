@@ -139,7 +139,11 @@
     mul r0.x, r0.x, c3.x
     mul o3.xyz, r0.x, c216
     mov o0, r1
-    mov o10, r1
+    mov o10.zw, r1
     mov o1.w, r1.w
-
+    mov r20.x, c8.w
+    add r20.x, r20.x, c9.w
+    add r20.x, r20.x, c10.w
+    add o10.y, r20.x, c11.w
+    
 // approximately 124 instruction slots used

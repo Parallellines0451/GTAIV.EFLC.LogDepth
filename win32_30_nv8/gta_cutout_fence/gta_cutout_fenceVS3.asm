@@ -52,10 +52,14 @@
     dp4 r1.x, r1, r2
     mad r0, r1.x, c10, r0
     add o0, r0, c11
-    add o10, r0, c11
+    add o10.zw, r0, c11
     mad r0.xyz, v3.xyxw, c0.yyzw, c0.zzyw
     dp3 o1.x, c208, r0
     dp3 o1.y, c209, r0
     mov o2, v4
-
+    mov r20.x, c8.w
+    add r20.x, r20.x, c9.w
+    add r20.x, r20.x, c10.w
+    add o10.y, r20.x, c11.w
+    
 // approximately 26 instruction slots used
