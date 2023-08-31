@@ -126,7 +126,7 @@
     rcp r0.x, r1.w
     mad o1.z, r1.z, -r0.x, c4.w
     mov o0, r1
-    mov o10, r1
+    mov o10.w, r1
     mul_sat r0.x, r3.y, c68.x
     mad r0.y, r3.x, c7.x, c7.x
     add r0.x, -r0.x, c4.w

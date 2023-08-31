@@ -180,7 +180,7 @@
     mul r0.x, r0.x, c4.z
     mul o3.xyz, r0.x, c223
     mov o0, r1
-    mov o10, r1
+    mov o10.w, r1
     mov o1.w, r1.w
 
 // approximately 154 instruction slots used (2 texture, 152 arithmetic)

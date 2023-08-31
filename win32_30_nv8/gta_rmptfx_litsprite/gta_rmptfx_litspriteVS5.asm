@@ -88,7 +88,7 @@
     mul_sat r0.x, r1.w, r0.x
     add r0.y, r1.w, -c41.x
     mov o0, r1
-    mov o10, r1
+    mov o10.w, r1
     add r0.z, -c41.x, c41.y
     rcp r0.z, r0.z
     mul_sat r0.y, r0.y, r0.z

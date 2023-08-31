@@ -127,7 +127,7 @@
     add r0.xyz, r0, -c15
     mov o1.xyz, -r0
     mov o0, r1
-    mov o10, r1
+    mov o10.w, r1
     mov o1.w, r1.w
 
 // approximately 119 instruction slots used

@@ -121,6 +121,6 @@
     mad r1, r0.x, c8, r1
     mad r0, r0.z, c10, r1
     add o0, r0, c11
-    add o10, r0, c11
+    add o10.w, r0, c11
 
 // approximately 115 instruction slots used

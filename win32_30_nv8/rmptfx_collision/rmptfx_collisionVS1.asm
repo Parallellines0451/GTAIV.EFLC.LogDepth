@@ -56,6 +56,6 @@
     rcp r1.x, r0.w
     mul o2.x, r0.z, r1.x
     mov o0, r0
-    mov o10, r0
+    mov o10.w, r0
 
 // approximately 31 instruction slots used

@@ -123,7 +123,7 @@
     mad r2.x, v6.x, c39.z, -r2.x
     mad o5.x, r1.w, r2.x, c222.x
     mov o0, r0
-    mov o10, r0
+    mov o10.w, r0
     mov o1.xy, v3
     mov o2.w, r0.w
     mov o2.xyz, r3

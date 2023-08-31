@@ -412,7 +412,7 @@
     add r1.xzw, -r2.xyyz, c42.xyyz
     mad o5.xyz, r1.y, r1.xzww, c43
     mov o0, r0
-    mov o10, r0
+    mov o10.w, r0
     mov o2, v3
     mov o3.xy, v4
     mul o4, c2.zyyy, v5.z

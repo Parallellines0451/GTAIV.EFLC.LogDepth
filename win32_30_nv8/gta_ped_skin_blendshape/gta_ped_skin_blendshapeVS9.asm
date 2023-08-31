@@ -133,7 +133,7 @@
     mad r1.w, v6.x, c39.z, -r3.x
     mad o5.x, r0.w, r1.w, c222.x
     mov o0, r2
-    mov o10, r2
+    mov o10.w, r2
     mov o1.xy, v3
     mov o2.w, r2.w
     mov o2.xyz, r0

@@ -80,7 +80,7 @@
     mad r0, r2.z, c10, r0
     add r0, r0, c11
     mov o0, r0
-    mov o10, r0
+    mov o10.w, r0
     mov o2.w, r0.w
     mov o6, v6
     mov o7.w, c0.y

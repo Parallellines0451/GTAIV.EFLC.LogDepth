@@ -66,7 +66,7 @@
     mad r1, r0.x, c8, r1
     mad r0, r0.z, c10, r1
     add o0, r0, c11
-    add o10, r0, c11
+    add o10.w, r0, c11
     mul r0.xyz, c1, v0.y
     mad r0.xyz, v0.x, c0, r0
     mad r0.xyz, v0.z, c2, r0

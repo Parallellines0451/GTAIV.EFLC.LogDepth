@@ -400,7 +400,7 @@
     mul_sat r1.x, r0.w, r1.x
     add r1.y, r0.w, -c41.x
     mov o0, r0
-    mov o10, r0
+    mov o10.w, r0
     add r0.x, -c41.x, c41.y
     rcp r0.x, r0.x
     mul_sat r0.x, r1.y, r0.x

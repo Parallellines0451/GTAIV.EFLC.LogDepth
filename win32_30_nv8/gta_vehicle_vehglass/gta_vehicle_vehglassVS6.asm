@@ -153,7 +153,7 @@
     mad r1, r1.x, c8, r2
     mad r0, r0.x, c10, r1
     add o0, r0, c11
-    add o10, r0, c11
+    add o10.w, r0, c11
     mov o1.xy, v2
     mad o2, v4.xyzx, c3.yyyz, c3.zzzy
     mov o3.xy, v3

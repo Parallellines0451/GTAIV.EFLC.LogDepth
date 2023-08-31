@@ -95,7 +95,7 @@
     mad r1, r1.z, c10, r4
     add r1, r1, c11
     mov o0, r1
-    mov o10, r1
+    mov o10.w, r1
     mov o1.xy, v2
     mov o2.w, r1.w
     mov o2.xyz, r2

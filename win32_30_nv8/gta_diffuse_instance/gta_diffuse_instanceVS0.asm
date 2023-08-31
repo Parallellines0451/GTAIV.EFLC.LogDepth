@@ -46,7 +46,7 @@
     mov o3.xyz, r0
     add r0, r1, c11
     mov o0, r0
-    mov o10, r0
+    mov o10.w, r0
     mov o4.w, r0.w
     mov o1, v2
     mov o2.xy, v3
