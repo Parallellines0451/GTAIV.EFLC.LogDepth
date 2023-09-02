@@ -1,0 +1,4 @@
+*.fxc
+*.exe
+*.bat
+.Build/
