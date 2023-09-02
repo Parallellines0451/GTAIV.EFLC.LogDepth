@@ -4,7 +4,7 @@ Logarithmic depth buffer implementation for GTA IV to fix z-fighting.
 The .asi disables depth bounds test on Nvidia and passes the near and far plane values to the corona vertex shader. [FusionFix](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix) also contains this functionality.
 Supported versions are 1.0.7.0, 1.0.8.0 and Complete Edition.
 
-Special thanks to [RaphaelK12](https://github.com/RaphaelK12) and [AssaultKifle47](https://github.com/akifle47/) for their support, [robi29](https://github.com/robi29/) for the soft particles fix and [ThirteenAG](https://github.com/ThirteenAG) for providing the asi.
+Special thanks to [RaphaelK12](https://github.com/RaphaelK12) and [AssaultKifle47](https://github.com/akifle47/) for their support, [robi29](https://github.com/robi29/) for the soft particles fix, [ThirteenAG](https://github.com/ThirteenAG) for providing the asi and [Shvab](https://github.com/d3g0n-byte) for making Rage Shader Editor.
 
 Notable articles:
 
