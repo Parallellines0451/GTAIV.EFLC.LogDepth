@@ -20,3 +20,6 @@ Functions used:
 - Linear2Log code is the same across all shaders except emissive ones due to ZShift; Log2Linear is identical in all except gta_rmptfx_litsprite since the vanilla game mistakenly used ndc space depth instead of view space for soft particles
 - All shaders use c128 (the native NearFarPlane register) except deferred_lightingVS11 (the corona vertex shader); a custom register (c227) was needed to pass these values consistently
 - The Linear2Log conditional statement is there to make sure that log depth is only written if a perspective projection is used, since the game uses the same registers for orthographic projection
+
+# Showcase video
+[![Showcase](https://img.youtube.com/vi/sAfKfvAIsXw/maxresdefault.jpg)](http://www.youtube.com/watch?v=sAfKfvAIsXw)
