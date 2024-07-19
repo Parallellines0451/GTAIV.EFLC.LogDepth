@@ -1,25 +1,28 @@
 # GTAIV.EFLC.LogDepth
-Logarithmic depth buffer implementation for GTA IV to fix z-fighting.
+Grand Theft Auto IV on PC suffers from severe z-fighting due to the use of a conventional depth buffer, as opposed to the console versions, which use reversed depth. This repository provides a logarithmic depth implementation for the game's shaders, which mitigates the issue similarly to reversed depth, and it's also the base for [Fusion Shaders](https://github.com/Parallellines0451/GTAIV.EFLC.FusionShaders).
 
-Code injection is required to disable depth bounds test and to pass the near and far plane values to the c227 register. [FusionFix](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix) does this.
+A showcase is available [here](http://www.youtube.com/watch?v=sAfKfvAIsXw).
 
-Special thanks to [RaphaelK12](https://github.com/RaphaelK12) and [AssaultKifle47](https://github.com/akifle47/) for their support, [robi29](https://github.com/robi29/) for the soft particles fix, [ThirteenAG](https://github.com/ThirteenAG) for making FusionFix and [Shvab](https://github.com/d3g0n-byte) for making Rage Shader Editor.
+## Requirements
+All game versions post 1.0.6.0 are supported.
 
-Notable articles:
+There are some prerequisites for these shaders to work correctly and examples of each of them are implemented in [FusionFix](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix):
+- Depth bounds test (specifically [D3DRS_ADAPTIVETESS_X](https://developer.download.nvidia.com/GPU_Programming_Guide/GPU_Programming_Guide_G80.pdf)) needs to be disabled to fix light pop-in on Nvidia graphics cards, and on AMD if using DXVK
+- The game's current near and far clip values need to be sent to the c227 vertex shader register for corona depth test to work (in deferred_lightingVS11)
+- Near and far clip overrides need to be removed from cutscenes and timecycmodifiers in order to prevent flickering as the game tends to update their values erratically
 
+## Notes and complementary fixes
+- The ZShift sign in gta_emissivestrong shaders was erroneously inverted by patch 1.0.6.0, which made several lights invisible; this was reverted, but it causes clipping on traffic lights because that patch also enabled D3DRS_ZWRITEENABLE for emissives, thus optional adjusted models are provided here
+- Linear2Log code is the same across all shaders except emissive ones due to ZShift; Log2Linear is the same across all but gta_rmptfx_litsprite, as a fix for soft particles was included, courtesy of robi29
+- Since the game uses the same registers for orthographic and perspective projection, Linear2Log only writes logarithmic depth in the case of the latter to prevent rain and UI issues
+
+## Conclusion
+Special thanks to [RaphaelK12](https://github.com/RaphaelK12), [AssaultKifle47](https://github.com/akifle47/), [robi29](https://github.com/robi29/), [ThirteenAG](https://github.com/ThirteenAG) and [Shvab](https://github.com/d3g0n-byte). Fixing this monumental issue wouldn't have been possible without their help.
+
+#### References:
 - [Brano Kemen - Maximizing Depth Buffer Range and Precision](https://outerra.blogspot.com/2012/11/maximizing-depth-buffer-range-and.html)
 - [Thatcher Ulrich - Logarithmic Depth Buffer](http://tulrich.com/geekstuff/log_depth_buffer.txt)
 
-Functions used:
-- log_depth = log2(W_clip / near) / log2(far / near)
-- linear_depth = (far * (W_clip - near)) / (W_clip * (far - near))
-
-# Notes
-- ZShift sign was made negative in gta_emissivestrong to fix invisible/clipping lights around the map since it was mistakenly made positive after 1.0.6.0; this causes clipping on traffic lights because their models have improper ZShift, so fixed ones were provided
-- Linear2Log code is the same across all shaders except emissive ones due to ZShift; Log2Linear is identical in all except gta_rmptfx_litsprite since the vanilla game mistakenly used ndc space depth instead of view space for soft particles
-- All shaders use c128 (the native NearFarPlane register) except deferred_lightingVS11 (the corona vertex shader); a custom register (c227) was needed to pass these values consistently
-- The Linear2Log conditional statement is there to make sure that log depth is only written if a perspective projection is used, since the game uses the same registers for orthographic projection
-- The game has trouble updating the near & far plane register if their values change abruptly, causing flickering in some interiors and cutscenes; removing near/far plane overrides from cutscenes and timecycmodifiers fixes this (FusionFix does this too)
-
-# Showcase video
-[![Showcase](https://img.youtube.com/vi/sAfKfvAIsXw/maxresdefault.jpg)](http://www.youtube.com/watch?v=sAfKfvAIsXw)
+#### Functions used:
+- Linear2Log = log2(W_clip / near) / log2(far / near)
+- Log2Linear = (far * (W_clip - near)) / (W_clip * (far - near))
