@@ -83,33 +83,17 @@
     mad r1.xyz, r1, c0.xxyw, c0.y
     mad r2.xy, r0, r0.z, r1
     texld r1, r1.zyzw, s2
-    // ----------------------------------------------------------------- Log2Linear -----------------------------------------------------------------
-    if_ne r1.x, c127.y
-      rcp r20.x, c128.x
-      mul r20.x, r20.x, c128.y
-      pow r20.x, r20.x, r1.x
-      mul r20.x, r20.x, c128.x // W_clip
-      
-      add r20.y, r20.x, -c128.x
-      add r20.z, c128.y, -c128.x
-      mul r20.y, r20.y, c128.y
-      mul r20.z, r20.z, r20.x
-      rcp r20.z, r20.z
-      mul r20.w, r20.y, r20.z // Linear depth
-      
-      min r1, r20.w, c127.x // FP error hack
-    endif
-    // ----------------------------------------------------------------------------------------------------------------------------------------------
     mov r2.zw, c0.w
     texldl r2, r2, s1
     mul r0.xyz, r2, c73.x
-    add r1.y, -c74.x, c74.y
-    rcp r1.y, r1.y
-    mad r1.x, c74.y, -r1.y, r1.x
-    mul r1.y, r1.y, c74.y
-    mul r1.y, r1.y, c74.x
-    rcp r1.x, r1.x
-    mad r1.x, -r1.y, r1.x, -v0.z
+    
+    // LogDepth Read
+    rcp r20.x, c128.x
+    mul r20.x, r20.x, c128.y
+    pow r20.x, r20.x, r1.x
+    mul r1.x, r20.x, c128.x
+    
+    add r1.x, r1.x, -v0.z
     mov r1.yz, c0
     mul r1.z, r1.z, c66.w
     mul r1.z, r1.x, r1.z
